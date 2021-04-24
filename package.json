@@ -5,11 +5,13 @@
   "repository": "https://github.com/r4iser/tindev_backend.git",
   "author": "r4iser <71898254+r4iser@users.noreply.github.com>",
   "license": "MIT",
-  "scripts" : {
+  "scripts": {
     "start": "nodemon src/server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
