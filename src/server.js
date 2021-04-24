@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const routes = require('./routes.js');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const server = express();
 
@@ -14,6 +15,7 @@ mongoose.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(db => console.log("Conectado com sucesso ao banco de dados."))
   .catch(err => console.log(">> ERROR: ",err));
 
+server.use(cors());
 server.use(express.json());
 server.use(routes);
 
